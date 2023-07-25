@@ -9,7 +9,7 @@ class processors:
     def pre_emphasis(self, audio_to_process):
         if audio_to_process is not None:
             self.speech_wav = audio_to_process
-        processed_audio = lb.effects.preemphasis(self.speech_wav, coef=0.97)
+        processed_audio = lb.effects.preemphasis(self.speech_wav[0], coef=0.97)
 
         sf.write("Recordings/mic_emp.wav", processed_audio, 44100, subtype="PCM_24")
 

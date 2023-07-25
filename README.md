@@ -25,4 +25,6 @@ Program is created as Engineering Thesis by [JacobeCode](https://github.com/Jaco
 
 ## Content
 
-### 
+### Issues to fix
+
+- scaling graphs and spectrogram's

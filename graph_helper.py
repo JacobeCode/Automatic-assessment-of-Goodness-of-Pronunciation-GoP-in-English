@@ -12,8 +12,8 @@ class graph_helper:
         self.fs = 44100
 
     def plot_spectrogram(self):
-        audio = lb.load("Recordings/mic.wav", sr=self.fs)
-        audio_emp = lb.effects.preemphasis(audio[0])
+        audio = lb.load("Recordings/mic.wav")
+        audio_emp = lb.load("Recordings/mic_emp.wav")
         s_orig = lb.amplitude_to_db(np.abs(lb.stft(audio[0])), ref=np.max, top_db=None)
         s_emphasised = lb.amplitude_to_db(np.abs(lb.stft(audio_emp)), ref=np.max, top_db=None)
         fig, ax = plt.subplots(nrows=2, sharex=True, sharey=True)

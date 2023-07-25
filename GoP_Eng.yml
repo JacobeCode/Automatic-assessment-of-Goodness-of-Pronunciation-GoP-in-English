@@ -1,0 +1,15 @@
+name: GoP_Eng
+channels:
+  - defaults
+collections:
+  - defaults
+dependencies:
+  - pip>=23.1.2
+  - pip:
+      - PyAudio == 0.2.13
+      - pynput == 1.7.6
+      - key == 0.4
+      - librosa == 0.10.0
+      - matplotlib == 3.7.2
+      - numpy == 1.24.4
+      - phonemizer == 3.0.1

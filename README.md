@@ -11,6 +11,7 @@ Program is created as Engineering Thesis by [JacobeCode](https://github.com/Jaco
 
 - Python 3.x
 - packages assembled in [GoP_Ebg.yml](GoP_Eng.yml)
+- PyTorch (torch, torchvision, torchaudio) as shown at starting page [PyTorch](https://pytorch.org/get-started/locally/)
 
 ## Instances and functions to use:
 

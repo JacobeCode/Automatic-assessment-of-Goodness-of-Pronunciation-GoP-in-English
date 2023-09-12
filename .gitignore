@@ -160,3 +160,9 @@ cython_debug/
 #.idea/
 *.xml
 *.wav
+
+timit_asr/
+
+Recordings/
+
+data.html

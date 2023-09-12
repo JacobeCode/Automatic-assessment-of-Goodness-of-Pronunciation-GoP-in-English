@@ -3,6 +3,7 @@ from recorder import recorder
 from player import player
 from graph_helper import graph_helper
 from processors import processors
+from phonemizer import phonemizer
 
 import librosa as lb
 
@@ -15,7 +16,10 @@ if __name__ == '__main__':
     wav_operator.join()
 
 preproc = processors(lb.load("Recordings/mic.wav"))
-pre_processed_audio = preproc.full_pre_process()
-
-gp = graph_helper()
-gp.plot_spectrogram()
+# pre_processed_audio = preproc.full_pre_process()
+#
+# gp = graph_helper()
+# gp.plot_spectrogram()
+#
+# phone_model = phonemizer()
+# phone_model.phonemize()

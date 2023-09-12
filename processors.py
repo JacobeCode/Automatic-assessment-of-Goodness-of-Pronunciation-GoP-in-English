@@ -39,7 +39,7 @@ class processors:
 
         normalized_audio = audio_to_process*normalized_parameter
 
-        sf.write("Recordings/mic_emp_wout_silence.wav", normalized_audio, 44100, subtype="PCM_24")
+        sf.write("Recordings/mic_normalized.wav", normalized_audio, 44100, subtype="PCM_24")
 
         return normalized_audio
 

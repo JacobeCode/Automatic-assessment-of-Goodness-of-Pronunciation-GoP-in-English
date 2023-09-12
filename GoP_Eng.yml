@@ -12,5 +12,11 @@ dependencies:
       - librosa == 0.10.0
       - matplotlib == 3.7.2
       - numpy == 1.24.4
-      - phonemizer == 3.0.1
-      - allosaurus == 1.0.2
+      - phonemizer == 3.0.1         #the one for TextPhonemizer - if not used, it can be deleted
+      - allosaurus == 1.0.2         #the one for Allosaurus - if not used, it can be deleted
+      - transformers == 4.31.0      #the one for Wav2Vec2Phoneme - if not used, it can be deleted
+      - datasets == 2.14.4          #the one for Wav2Vec2Phoneme - if not used, it can be deleted
+      - jiwer == 3.0.3              #this one is for evaluation of ASR system (WER, MER etc.)
+      - ipywidgets == 8.1.0         #this one to launch notebook_login form hugging_face HUB (also for W2V2P)
+      - huggingface == 0.16.4       #this one for me - for management of HuggingFace repo
+      - git-lfs == 1.6              #--//--

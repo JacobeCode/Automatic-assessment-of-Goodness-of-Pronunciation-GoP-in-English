@@ -5,8 +5,9 @@ collections:
   - defaults
 dependencies:
   - pip>=23.1.2
-  - pip:
+  - conda:
       - PyAudio == 0.2.13
+  - pip:
       - pynput == 1.7.6
       - key == 0.4
       - librosa == 0.10.0

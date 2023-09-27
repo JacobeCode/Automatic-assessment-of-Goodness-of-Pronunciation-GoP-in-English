@@ -7,6 +7,11 @@ Main goal of the program is automatic assessment with Goodnees of Pronuanciactio
 
 Program is created as Engineering Thesis by [JacobeCode](https://github.com/JacobeCode).
 
+## Branch Desription
+
+This branch is an effect of decision that further work build upon Interspeech 2021 Articule.
+Additionally the Speachocean762 v1.2 will be used as dataset.
+
 ## Installation/Requirements
 
 - Python 3.x

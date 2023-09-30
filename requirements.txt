@@ -1,0 +1,20 @@
+# These below are needed for kaldi - you can install them manually or find in kaldi specification
+# Be aware that this is sudo install
+automake==1.16.5
+autoconf==2.71-2
+sox==14.4.2
+gfortran==11.2.0
+# This or libtoolize - glibtoolize
+libtoolize==2.4.6-15
+subversion==1.14.1
+python2.7==2.7.1-13
+
+# Also there Intel MKL is needed - You can install it from Kaldi
+# In case of any problem you can also use - sudo apt_get -y install intel-mkl
+
+
+g++==11.2.0 # In description is highlighted ver.4.8 (if something will decide to crash this can be a problem)
+
+# Then you need to execute Makefile from extras - make (-j 4 -> will sped up a little, because it will use 4 CPUs)
+
+# IRSTLM is not installed by default - if needed later install from install_irstlm.sh

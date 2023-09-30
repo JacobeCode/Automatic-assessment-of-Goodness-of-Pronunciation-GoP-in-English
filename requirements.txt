@@ -18,3 +18,16 @@ g++==11.2.0 # In description is highlighted ver.4.8 (if something will decide to
 # Then you need to execute Makefile from extras - make (-j 4 -> will sped up a little, because it will use 4 CPUs)
 
 # IRSTLM is not installed by default - if needed later install from install_irstlm.sh
+
+# CUDA Warning - will try install it later
+# Important after installation try: --cudatk-dir= option
+
+# Modyfied exp/nnet3_cleaned/tdnn_sp - added chain_cleaned eg model
+
+# Modyfied exp/nnet3_cleaned/extractor - added i-vector extractor
+
+# Modyfied data/lang - added lang model
+
+# Modyfied data main folder - added to GoP_Eng/data - download of speechocean
+
+# Currently on step 7/8 - kaldi.io install

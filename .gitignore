@@ -163,3 +163,4 @@ cython_debug/
 #.idea/
 
 # kaldi repository for use (download and install manually) - mod unimportant stuff
+kaldi/

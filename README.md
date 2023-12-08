@@ -1,4 +1,4 @@
-# Auto_assessment_of_GoP_Eng
+# Automatic assessment of Goodness of Pronunciation in English
 
 ## Introduction
 This repository contains files and informations about project created as Engineering Thesis. 

@@ -1,0 +1,8 @@
+local/download_and_untar.sh: data part speechocean762 was already successfully extracted, nothing to do.
+utils/validate_data_dir.sh: Successfully validated data-directory data/train
+local/data_prep.sh: successfully prepared data in data/train
+utils/validate_data_dir.sh: Successfully validated data-directory data/test
+local/data_prep.sh: successfully prepared data in data/test
+steps/make_mfcc.sh --nj 25 --mfcc-config conf/mfcc_hires.conf --cmd run.pl data/train
+utils/validate_data_dir.sh: Successfully validated data-directory data/train
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.

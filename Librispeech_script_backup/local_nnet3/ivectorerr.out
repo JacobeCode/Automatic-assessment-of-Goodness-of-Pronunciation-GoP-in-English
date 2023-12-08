@@ -1,0 +1,4 @@
+/var/spool/slurmd/job6240007/slurm_script: line 60: ./cmd.sh: No such file or directory
+/var/spool/slurmd/job6240007/slurm_script: line 61: ./path.sh: No such file or directory
+/var/spool/slurmd/job6240007/slurm_script: line 62: ./utils/parse_options.sh: No such file or directory
+/var/spool/slurmd/job6240007/slurm_script: line 65: cuda-compiled: command not found

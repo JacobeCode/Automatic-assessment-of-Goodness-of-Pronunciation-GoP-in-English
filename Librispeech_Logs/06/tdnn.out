@@ -1,0 +1,5 @@
+local/chain/run_tdnn.sh 
+local/nnet3/run_ivector_common.sh: aligning with the perturbed low-resolution data
+steps/align_fmllr.sh --nj 100 --cmd run.pl --mem 2G data/train_960_cleaned_sp data/lang exp/tri6b_cleaned exp/tri6b_cleaned_ali_train_960_cleaned_sp
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs

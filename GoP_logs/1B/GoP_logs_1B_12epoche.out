@@ -1,0 +1,278 @@
+local/download_and_untar.sh: data part speechocean762 was already successfully extracted, nothing to do.
+utils/validate_data_dir.sh: Successfully validated data-directory data/train
+local/data_prep.sh: successfully prepared data in data/train
+utils/validate_data_dir.sh: Successfully validated data-directory data/test
+local/data_prep.sh: successfully prepared data in data/test
+steps/make_mfcc.sh --nj 25 --mfcc-config conf/mfcc_hires.conf --cmd run.pl data/train
+steps/make_mfcc.sh: moving data/train/feats.scp to data/train/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for train
+steps/compute_cmvn_stats.sh data/train
+Succeeded creating CMVN stats for train
+fix_data_dir.sh: kept all 2500 utterances.
+fix_data_dir.sh: old files are kept in data/train/.backup
+steps/make_mfcc.sh --nj 25 --mfcc-config conf/mfcc_hires.conf --cmd run.pl data/test
+steps/make_mfcc.sh: moving data/test/feats.scp to data/test/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/test
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for test
+steps/compute_cmvn_stats.sh data/test
+Succeeded creating CMVN stats for test
+fix_data_dir.sh: kept all 2500 utterances.
+fix_data_dir.sh: old files are kept in data/test/.backup
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --nj 25 data/train ../../librispeech/s5/exp/nnet3_cleaned/extractor data/train/ivectors
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to data/train/ivectors using the extractor in ../../librispeech/s5/exp/nnet3_cleaned/extractor.
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --nj 25 data/test ../../librispeech/s5/exp/nnet3_cleaned/extractor data/test/ivectors
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to data/test/ivectors using the extractor in ../../librispeech/s5/exp/nnet3_cleaned/extractor.
+steps/nnet3/compute_output.sh --cmd run.pl --nj 25 --online-ivector-dir data/train/ivectors data/train ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont exp/probs_train
+steps/nnet3/compute_output.sh: WARNING: no such file ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/final.raw. Trying ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/final.mdl instead.
+steps/nnet3/compute_output.sh --cmd run.pl --nj 25 --online-ivector-dir data/test/ivectors data/test ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont exp/probs_test
+steps/nnet3/compute_output.sh: WARNING: no such file ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/final.raw. Trying ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/final.mdl instead.
+Preparing phone lists
+2 silence phones saved to: data/local/dict_nosp/silence_phones.txt
+1 optional silence saved to: data/local/dict_nosp/optional_silence.txt
+39 non-silence phones saved to: data/local/dict_nosp/nonsilence_phones.txt
+5 extra triphone clustering-related questions saved to: data/local/dict_nosp/extra_questions.txt
+Lexicon text file saved as: data/local/dict_nosp/lexicon.txt
+utils/prepare_lang.sh --phone-symbol-table ../../librispeech/s5/data/lang/phones.txt data/local/dict_nosp <UNK> data/local/lang_tmp_nosp data/lang_nosp
+Checking data/local/dict_nosp/silence_phones.txt ...
+--> reading data/local/dict_nosp/silence_phones.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict_nosp/silence_phones.txt is OK
+
+Checking data/local/dict_nosp/optional_silence.txt ...
+--> reading data/local/dict_nosp/optional_silence.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict_nosp/optional_silence.txt is OK
+
+Checking data/local/dict_nosp/nonsilence_phones.txt ...
+--> reading data/local/dict_nosp/nonsilence_phones.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict_nosp/nonsilence_phones.txt is OK
+
+Checking disjoint: silence_phones.txt, nonsilence_phones.txt
+--> disjoint property is OK.
+
+Checking data/local/dict_nosp/lexicon.txt
+--> reading data/local/dict_nosp/lexicon.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict_nosp/lexicon.txt is OK
+
+Checking data/local/dict_nosp/lexiconp.txt
+--> reading data/local/dict_nosp/lexiconp.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict_nosp/lexiconp.txt is OK
+
+Checking lexicon pair data/local/dict_nosp/lexicon.txt and data/local/dict_nosp/lexiconp.txt
+--> lexicon pair data/local/dict_nosp/lexicon.txt and data/local/dict_nosp/lexiconp.txt match
+
+Checking data/local/dict_nosp/extra_questions.txt ...
+--> reading data/local/dict_nosp/extra_questions.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict_nosp/extra_questions.txt is OK
+--> SUCCESS [validating dictionary directory data/local/dict_nosp]
+
+prepare_lang.sh: validating output directory
+utils/validate_lang.pl data/lang_nosp
+Checking existence of separator file
+separator file data/lang_nosp/subword_separator.txt is empty or does not exist, deal in word case.
+Checking data/lang_nosp/phones.txt ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang_nosp/phones.txt is OK
+
+Checking words.txt: #0 ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang_nosp/words.txt is OK
+
+Checking disjoint: silence.txt, nonsilence.txt, disambig.txt ...
+--> silence.txt and nonsilence.txt are disjoint
+--> silence.txt and disambig.txt are disjoint
+--> disambig.txt and nonsilence.txt are disjoint
+--> disjoint property is OK
+
+Checking sumation: silence.txt, nonsilence.txt, disambig.txt ...
+--> found no unexplainable phones in phones.txt
+
+Checking data/lang_nosp/phones/context_indep.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 10 entry/entries in data/lang_nosp/phones/context_indep.txt
+--> data/lang_nosp/phones/context_indep.int corresponds to data/lang_nosp/phones/context_indep.txt
+--> data/lang_nosp/phones/context_indep.csl corresponds to data/lang_nosp/phones/context_indep.txt
+--> data/lang_nosp/phones/context_indep.{txt, int, csl} are OK
+
+Checking data/lang_nosp/phones/nonsilence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 320 entry/entries in data/lang_nosp/phones/nonsilence.txt
+--> data/lang_nosp/phones/nonsilence.int corresponds to data/lang_nosp/phones/nonsilence.txt
+--> data/lang_nosp/phones/nonsilence.csl corresponds to data/lang_nosp/phones/nonsilence.txt
+--> data/lang_nosp/phones/nonsilence.{txt, int, csl} are OK
+
+Checking data/lang_nosp/phones/silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 10 entry/entries in data/lang_nosp/phones/silence.txt
+--> data/lang_nosp/phones/silence.int corresponds to data/lang_nosp/phones/silence.txt
+--> data/lang_nosp/phones/silence.csl corresponds to data/lang_nosp/phones/silence.txt
+--> data/lang_nosp/phones/silence.{txt, int, csl} are OK
+
+Checking data/lang_nosp/phones/optional_silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang_nosp/phones/optional_silence.txt
+--> data/lang_nosp/phones/optional_silence.int corresponds to data/lang_nosp/phones/optional_silence.txt
+--> data/lang_nosp/phones/optional_silence.csl corresponds to data/lang_nosp/phones/optional_silence.txt
+--> data/lang_nosp/phones/optional_silence.{txt, int, csl} are OK
+
+Checking data/lang_nosp/phones/disambig.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 6 entry/entries in data/lang_nosp/phones/disambig.txt
+--> data/lang_nosp/phones/disambig.int corresponds to data/lang_nosp/phones/disambig.txt
+--> data/lang_nosp/phones/disambig.csl corresponds to data/lang_nosp/phones/disambig.txt
+--> data/lang_nosp/phones/disambig.{txt, int, csl} are OK
+
+Checking data/lang_nosp/phones/roots.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 41 entry/entries in data/lang_nosp/phones/roots.txt
+--> data/lang_nosp/phones/roots.int corresponds to data/lang_nosp/phones/roots.txt
+--> data/lang_nosp/phones/roots.{txt, int} are OK
+
+Checking data/lang_nosp/phones/sets.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 41 entry/entries in data/lang_nosp/phones/sets.txt
+--> data/lang_nosp/phones/sets.int corresponds to data/lang_nosp/phones/sets.txt
+--> data/lang_nosp/phones/sets.{txt, int} are OK
+
+Checking data/lang_nosp/phones/extra_questions.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 14 entry/entries in data/lang_nosp/phones/extra_questions.txt
+--> data/lang_nosp/phones/extra_questions.int corresponds to data/lang_nosp/phones/extra_questions.txt
+--> data/lang_nosp/phones/extra_questions.{txt, int} are OK
+
+Checking data/lang_nosp/phones/word_boundary.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 330 entry/entries in data/lang_nosp/phones/word_boundary.txt
+--> data/lang_nosp/phones/word_boundary.int corresponds to data/lang_nosp/phones/word_boundary.txt
+--> data/lang_nosp/phones/word_boundary.{txt, int} are OK
+
+Checking optional_silence.txt ...
+--> reading data/lang_nosp/phones/optional_silence.txt
+--> data/lang_nosp/phones/optional_silence.txt is OK
+
+Checking disambiguation symbols: #0 and #1
+--> data/lang_nosp/phones/disambig.txt has "#0" and "#1"
+--> data/lang_nosp/phones/disambig.txt is OK
+
+Checking topo ...
+
+Checking word_boundary.txt: silence.txt, nonsilence.txt, disambig.txt ...
+--> data/lang_nosp/phones/word_boundary.txt doesn't include disambiguation symbols
+--> data/lang_nosp/phones/word_boundary.txt is the union of nonsilence.txt and silence.txt
+--> data/lang_nosp/phones/word_boundary.txt is OK
+
+Checking word-level disambiguation symbols...
+--> data/lang_nosp/phones/wdisambig.txt exists (newer prepare_lang.sh)
+Checking word_boundary.int and disambig.int
+--> generating a 12 word/subword sequence
+--> resulting phone sequence from L.fst corresponds to the word sequence
+--> L.fst is OK
+--> generating a 67 word/subword sequence
+--> resulting phone sequence from L_disambig.fst corresponds to the word sequence
+--> L_disambig.fst is OK
+
+Checking data/lang_nosp/oov.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang_nosp/oov.txt
+--> data/lang_nosp/oov.int corresponds to data/lang_nosp/oov.txt
+--> data/lang_nosp/oov.{txt, int} are OK
+
+--> data/lang_nosp/L.fst is olabel sorted
+--> data/lang_nosp/L_disambig.fst is olabel sorted
+--> SUCCESS [validating lang directory data/lang_nosp]
+steps/align_mapped.sh --cmd run.pl --nj 25 --graphs exp/ali_train data/train exp/probs_train ../../librispeech/s5/data/lang ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont exp/ali_train
+steps/align_mapped.sh: aligning data in data/train using model from ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont, putting alignments in exp/ali_train
+steps/diagnostic/analyze_alignments.sh --cmd run.pl ../../librispeech/s5/data/lang exp/ali_train
+steps/diagnostic/analyze_alignments.sh: see stats in exp/ali_train/log/analyze_alignments.log
+steps/align_mapped.sh: done aligning data.
+steps/align_mapped.sh --cmd run.pl --nj 25 --graphs exp/ali_test data/test exp/probs_test ../../librispeech/s5/data/lang ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont exp/ali_test
+steps/align_mapped.sh: aligning data in data/test using model from ../../librispeech/s5/exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont, putting alignments in exp/ali_test
+steps/diagnostic/analyze_alignments.sh --cmd run.pl ../../librispeech/s5/data/lang exp/ali_test
+steps/diagnostic/analyze_alignments.sh: see stats in exp/ali_test/log/analyze_alignments.log
+steps/align_mapped.sh: done aligning data.
+The features are visualized and saved in exp/gop_train/feats.png
+Unmatch: S <--> AY 
+Unmatch: AO <--> S 
+Unmatch: HH <--> AO 
+Unmatch: IH <--> HH 
+Unmatch: M <--> IH 
+Unmatch: AO <--> M 
+Unmatch: DH <--> AO 
+Unmatch: AE <--> DH 
+Unmatch: N <--> AE 
+Unmatch: AE <--> N 
+Unmatch: NG <--> AE 
+Unmatch: G <--> NG 
+Unmatch: R <--> G 
+Unmatch: IY <--> R 
+Unmatch: N <--> IY 
+Unmatch: AW <--> N 
+MSE: 0.68
+Corr: 0.25
+              precision    recall  f1-score   support
+
+           0       0.28      0.40      0.33      1357
+           1       0.05      0.76      0.09      1830
+           2       0.98      0.38      0.55     44067
+
+    accuracy                           0.40     47254
+   macro avg       0.44      0.51      0.32     47254
+weighted avg       0.93      0.40      0.53     47254
+
+Unmatch: M <--> IH 
+Unmatch: R <--> G 
+Unmatch: IH <--> HH 
+Unmatch: G <--> NG 
+Unmatch: NG <--> AE 
+Unmatch: S <--> AY 
+Unmatch: IY <--> R 
+Unmatch: N <--> AE 
+Unmatch: N <--> IY 
+Unmatch: AO <--> S 
+Unmatch: AO <--> M 
+Unmatch: AE <--> DH 
+Unmatch: AE <--> N 
+Unmatch: HH <--> AO 
+Unmatch: DH <--> AO 
+Unmatch: AW <--> N 
+MSE: 0.17
+Corr: 0.44
+              precision    recall  f1-score   support
+
+           0       0.42      0.27      0.33      1357
+           1       0.16      0.39      0.22      1830
+           2       0.97      0.92      0.94     44067
+
+    accuracy                           0.88     47254
+   macro avg       0.51      0.52      0.50     47254
+weighted avg       0.92      0.88      0.90     47254
+

@@ -1,0 +1,14 @@
+# This file was created by the command:
+# steps/nnet3/xconfig_to_configs.py --xconfig-file=exp/rnnlm_lstm_1a/config/xconfig --config-dir=exp/rnnlm_lstm_1a/config/nnet
+# It contains the same content as ./xconfig but it was parsed,
+# default config values were set, 
+# and Descriptors (input=xxx) were normalized.
+# See also ./xconfig.expanded.1
+
+input name=input dim=1024
+relu-renorm-layer name=tdnn1 add-log-stddev=False bias-stddev= bottleneck-dim=-1 dim=1024 dropout-per-dim=False dropout-per-dim-continuous=False dropout-proportion=0.5 input=Append(input, IfDefined(Offset(input, -1))) l2-regularize= learning-rate-factor= max-change=0.75 ng-affine-options= ng-linear-options= self-repair-scale=1e-05 target-rms=1.0
+fast-lstmp-layer name=lstm1 cell-dim=1024 clipping-threshold=30.0 decay-time=-1.0 delay=-1 dropout-proportion=-1.0 input=tdnn1 l2-regularize=0.0 lstm-nonlinearity-options=" max-change=0.75" ng-affine-options=" max-change=1.5" non-recurrent-projection-dim=256 recurrent-projection-dim=256 zeroing-interval=20 zeroing-threshold=15.0
+relu-renorm-layer name=tdnn2 add-log-stddev=False bias-stddev= bottleneck-dim=-1 dim=1024 dropout-per-dim=False dropout-per-dim-continuous=False dropout-proportion=0.5 input=Append(lstm1, IfDefined(Offset(lstm1, -3))) l2-regularize= learning-rate-factor= max-change=0.75 ng-affine-options= ng-linear-options= self-repair-scale=1e-05 target-rms=1.0
+fast-lstmp-layer name=lstm2 cell-dim=1024 clipping-threshold=30.0 decay-time=-1.0 delay=-1 dropout-proportion=-1.0 input=tdnn2 l2-regularize=0.0 lstm-nonlinearity-options=" max-change=0.75" ng-affine-options=" max-change=1.5" non-recurrent-projection-dim=256 recurrent-projection-dim=256 zeroing-interval=20 zeroing-threshold=15.0
+relu-renorm-layer name=tdnn3 add-log-stddev=False bias-stddev= bottleneck-dim=-1 dim=1024 dropout-per-dim=False dropout-per-dim-continuous=False dropout-proportion=0.5 input=Append(lstm2, IfDefined(Offset(lstm2, -3))) l2-regularize= learning-rate-factor= max-change=0.75 ng-affine-options= ng-linear-options= self-repair-scale=1e-05 target-rms=1.0
+output-layer name=output bias-stddev=0.0 bottleneck-dim=-1 dim=1024 include-log-softmax=False input=tdnn3 l2-regularize= learning-rate-factor= max-change=1.5 ng-affine-options= ng-linear-options= objective-type=linear orthonormal-constraint=1.0 output-delay=0 param-stddev=0.0

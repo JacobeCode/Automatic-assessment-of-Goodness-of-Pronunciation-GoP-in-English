@@ -1,0 +1,30 @@
+# This file was created by the command:
+# steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/configs/network.xconfig --config-dir exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/configs
+# It contains the same content as ./xconfig but it was parsed,
+# default config values were set, 
+# and Descriptors (input=xxx) were normalized.
+# See also ./xconfig.expanded.1
+
+input name=ivector dim=100
+input name=input dim=40
+fixed-affine-layer name=lda affine-transform-file=exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/configs/lda.mat delay=0 dim=300 input=Append(Offset(input, -2), Offset(input, -1), input, Offset(input, 1), Offset(input, 2), ReplaceIndex(ivector, t, 0)) write-init-config=True
+relu-batchnorm-dropout-layer name=tdnn1 add-log-stddev=False bias-stddev= bottleneck-dim=-1 dim=1536 dropout-per-dim=False dropout-per-dim-continuous=False dropout-proportion=0.5 input=lda l2-regularize= learning-rate-factor= max-change=0.75 ng-affine-options= ng-linear-options= self-repair-scale=1e-05 target-rms=1.0
+tdnnf-layer name=tdnnf2 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnn1 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=1
+tdnnf-layer name=tdnnf3 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf2 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=1
+tdnnf-layer name=tdnnf4 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf3 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=1
+tdnnf-layer name=tdnnf5 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf4 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=0
+tdnnf-layer name=tdnnf6 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf5 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf7 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf6 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf8 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf7 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf9 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf8 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf10 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf9 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf11 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf10 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf12 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf11 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf13 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf12 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf14 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf13 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf15 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf14 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf16 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf15 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+tdnnf-layer name=tdnnf17 bottleneck-dim=160 bypass-scale=0.66 context=default dim=1536 dropout-proportion=-1.0 input=tdnnf16 l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 time-stride=3
+linear-component name=prefinal-l dim=256 input=tdnnf17 l2-regularize= learning-rate-factor= max-change=0.75 orthonormal-constraint= param-stddev=
+prefinal-layer name=prefinal big-dim=1536 input=prefinal-l l2-regularize=0.0 max-change=0.75 self-repair-scale=1e-05 small-dim=256
+output-layer name=output bias-stddev=0.0 bottleneck-dim=-1 dim=5688 include-log-softmax=True input=prefinal l2-regularize= learning-rate-factor= max-change=1.5 ng-affine-options= ng-linear-options= objective-type=linear orthonormal-constraint=1.0 output-delay=0 param-stddev=0.0

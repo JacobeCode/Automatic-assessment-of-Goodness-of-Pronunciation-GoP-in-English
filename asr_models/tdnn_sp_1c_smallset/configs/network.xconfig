@@ -1,0 +1,25 @@
+  input dim=100 name=ivector
+  input dim=40 name=input
+  fixed-affine-layer name=lda input=Append(-2,-1,0,1,2,ReplaceIndex(ivector, t, 0)) affine-transform-file=exp/nnet3_cleaned/tdnn_sp_1c_1e/configs/lda.mat
+
+  relu-batchnorm-dropout-layer name=tdnn1  dim=1536
+  tdnnf-layer name=tdnnf2  dim=1536 bottleneck-dim=160 time-stride=1
+  tdnnf-layer name=tdnnf3  dim=1536 bottleneck-dim=160 time-stride=1
+  tdnnf-layer name=tdnnf4  dim=1536 bottleneck-dim=160 time-stride=1
+  tdnnf-layer name=tdnnf5  dim=1536 bottleneck-dim=160 time-stride=0
+  tdnnf-layer name=tdnnf6  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf7  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf8  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf9  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf10  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf11  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf12  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf13  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf14  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf15  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf16  dim=1536 bottleneck-dim=160 time-stride=3
+  tdnnf-layer name=tdnnf17  dim=1536 bottleneck-dim=160 time-stride=3
+  linear-component name=prefinal-l dim=256 
+
+  prefinal-layer name=prefinal input=prefinal-l  big-dim=1536 small-dim=256
+  output-layer name=output input=prefinal dim=5688 max-change=1.5

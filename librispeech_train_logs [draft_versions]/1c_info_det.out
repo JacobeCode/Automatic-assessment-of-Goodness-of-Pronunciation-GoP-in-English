@@ -1,0 +1,10 @@
+generate_plots.py:786:WARNING:This script requires matplotlib and numpy.
+... Install these packages to generate plots.
+... If you are on a cluster where you do not have admin rights, use venv.
+... Generating text data table files only.
+generate_plots.py:726:INFO:Generating accuracy plots for 'output'
+generate_plots.py:733:INFO:Generating log-likelihood plots for 'output'
+generate_plots.py:761:INFO:Generating non-linearity stats plots
+generate_plots.py:766:INFO:Generating clipped-proportion plots
+common.py:153:WARNING:Command exited with status 1: grep -e "clipped-proportion" exp/nnet3_cleaned/tdnn_sp_1c_1e/log/progress.*.log
+generate_plots.py:771:INFO:Generating parameter difference plots

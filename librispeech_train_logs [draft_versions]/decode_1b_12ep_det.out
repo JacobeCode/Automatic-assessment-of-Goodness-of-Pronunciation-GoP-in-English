@@ -1,0 +1,7 @@
+run.pl: job failed, log is in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tgsmall/log/decode.1.log
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 

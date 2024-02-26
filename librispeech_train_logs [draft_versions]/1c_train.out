@@ -1,0 +1,19 @@
+local/nnet3/run_tdnn_1c.sh: creating neural net configs
+steps/nnet3/get_egs.sh --cmd run.pl --mem 4G --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires --left-context 41 --right-context 41 --left-context-initial -1 --right-context-final -1 --stage 0 --samples-per-iter 400000 --frames-per-eg 8 --srand 0 data/train_960_cleaned_sp_hires exp/tri6b_cleaned_ali_train_960_cleaned_sp exp/nnet3_cleaned/tdnn_sp_1c/egs
+File data/train_960_cleaned_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs.sh: creating egs.  To ensure they are not deleted later you can do:  touch exp/nnet3_cleaned/tdnn_sp_1c/egs/.nodelete
+steps/nnet3/get_egs.sh: feature type is raw, with 'apply-cmvn'
+steps/nnet3/get_egs.sh: working out number of frames of training data
+steps/nnet3/get_egs.sh: working out feature dim
+steps/nnet3/get_egs.sh: creating 323 archives, each with 399543 egs, with
+steps/nnet3/get_egs.sh:   8 labels per example, and (left,right) context = (41,41)
+steps/nnet3/get_egs.sh: copying data alignments
+steps/nnet3/get_egs.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+steps/nnet3/get_egs.sh: Generating training examples on disk
+steps/nnet3/get_egs.sh: recombining and shuffling order of archives on disk
+steps/nnet3/get_egs.sh: removing temporary archives
+steps/nnet3/get_egs.sh: removing temporary alignments
+steps/nnet3/get_egs.sh: Finished preparing training examples

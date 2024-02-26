@@ -1,0 +1,68 @@
+tree-info exp/tri6b_cleaned_ali_train_960_cleaned_sp/tree 
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/network.xconfig --config-dir exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs
+nnet3-init exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/init.config exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/init.raw 
+LOG (nnet3-init[5.5.1076~1-1b07b5]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/init.raw
+nnet3-info exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/init.raw 
+nnet3-init exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/ref.config exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/ref.raw 
+LOG (nnet3-init[5.5.1076~1-1b07b5]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/ref.raw
+nnet3-info exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/ref.raw 
+nnet3-init exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/ref.config exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/ref.raw 
+LOG (nnet3-init[5.5.1076~1-1b07b5]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/ref.raw
+nnet3-info exp/nnet3_cleaned/tdnn_sp_1c_small_blr/configs/ref.raw 
+2023-12-14 16:21:51,586 [/net/pr2/projects/plgrid/plggdspmwit/plgkgucik/kaldi/egs/librispeech/s5/steps/nnet3/train_dnn.py:36 - <module> - INFO ] Starting DNN trainer (train_dnn.py)
+steps/nnet3/train_dnn.py --stage=-10 --cmd=run.pl --mem 4G --feat.online-ivector-dir exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 1 --trainer.shuffle-buffer-size 375 --trainer.prior-subset-size 3000 --trainer.optimization.num-jobs-initial 1 --trainer.optimization.num-jobs-final 1 --trainer.optimization.initial-effective-lrate 0.045 --trainer.optimization.final-effective-lrate 0.00001 --trainer.optimization.minibatch-size 512 --trainer.num-jobs-compute-prior 4 --egs.dir  --cleanup.remove-egs true --cleanup.preserve-model-interval 80 --feat-dir=data/train_960_cleaned_sp_hires --ali-dir exp/tri6b_cleaned_ali_train_960_cleaned_sp --lang data/lang --reporting.email= --dir=exp/nnet3_cleaned/tdnn_sp_1c_small_blr
+['steps/nnet3/train_dnn.py', '--stage=-10', '--cmd=run.pl --mem 4G', '--feat.online-ivector-dir', 'exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '1', '--trainer.shuffle-buffer-size', '375', '--trainer.prior-subset-size', '3000', '--trainer.optimization.num-jobs-initial', '1', '--trainer.optimization.num-jobs-final', '1', '--trainer.optimization.initial-effective-lrate', '0.045', '--trainer.optimization.final-effective-lrate', '0.00001', '--trainer.optimization.minibatch-size', '512', '--trainer.num-jobs-compute-prior', '4', '--egs.dir', '', '--cleanup.remove-egs', 'true', '--cleanup.preserve-model-interval', '80', '--feat-dir=data/train_960_cleaned_sp_hires', '--ali-dir', 'exp/tri6b_cleaned_ali_train_960_cleaned_sp', '--lang', 'data/lang', '--reporting.email=', '--dir=exp/nnet3_cleaned/tdnn_sp_1c_small_blr']
+2023-12-14 16:21:51,632 [/net/pr2/projects/plgrid/plggdspmwit/plgkgucik/kaldi/egs/librispeech/s5/steps/nnet3/train_dnn.py:178 - train - INFO ] Arguments for the experiment
+{'ali_dir': 'exp/tri6b_cleaned_ali_train_960_cleaned_sp',
+ 'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3_cleaned/tdnn_sp_1c_small_blr',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': None,
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/train_960_cleaned_sp_hires',
+ 'final_effective_lrate': 1e-05,
+ 'frames_per_eg': 8,
+ 'initial_effective_lrate': 0.045,
+ 'input_model': None,
+ 'lang': 'data/lang',
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_objective_evaluations': 30,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '512',
+ 'momentum': 0.0,
+ 'num_epochs': 1.0,
+ 'num_jobs_compute_prior': 4,
+ 'num_jobs_final': 1,
+ 'num_jobs_initial': 1,
+ 'num_jobs_step': 1,
+ 'online_ivector_dir': 'exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires',
+ 'preserve_model_interval': 80,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 3000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': True,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 375,
+ 'srand': 0,
+ 'stage': -10,
+ 'train_opts': [],
+ 'use_gpu': 'yes'}
+2023-12-14 16:21:53,518 [/net/pr2/projects/plgrid/plggdspmwit/plgkgucik/kaldi/egs/librispeech/s5/steps/nnet3/train_dnn.py:228 - train - INFO ] Initializing a basic network for estimating preconditioning matrix
+2023-12-14 16:21:53,856 [/net/pr2/projects/plgrid/plggdspmwit/plgkgucik/kaldi/egs/librispeech/s5/steps/nnet3/train_dnn.py:238 - train - INFO ] Generating egs
+feat-to-dim scp:exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires/ivector_online.scp - 
+copy-int-vector ark:- ark,scp:exp/nnet3_cleaned/tdnn_sp_1c_small_blr/egs/ali.ark,exp/nnet3_cleaned/tdnn_sp_1c_small_blr/egs/ali.scp 
+LOG (copy-int-vector[5.5.1076~1-1b07b5]:main():copy-int-vector.cc:83) Copied 904676 vectors of int32.

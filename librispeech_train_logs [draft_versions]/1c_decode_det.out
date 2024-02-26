@@ -1,0 +1,8 @@
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 

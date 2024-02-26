@@ -1,0 +1,2 @@
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+fix_data_dir.sh: no utterances remained: not proceeding further.

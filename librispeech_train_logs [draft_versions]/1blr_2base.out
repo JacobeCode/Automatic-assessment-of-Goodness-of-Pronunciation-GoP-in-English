@@ -1,0 +1,1 @@
+local/nnet3/run_tdnn_1b_lr.sh: expected file data/train_960_sp_hires/feats.scp to exist

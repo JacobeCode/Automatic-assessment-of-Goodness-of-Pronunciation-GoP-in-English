@@ -1,0 +1,56 @@
+tree-info exp/tri6b_cleaned_ali_train_960_cleaned_sp/tree 
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/network.xconfig --config-dir exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs
+nnet3-init exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/init.config exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/init.raw 
+LOG (nnet3-init[5.5.1076~1-1b07b5]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/init.raw
+nnet3-info exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/init.raw 
+nnet3-init exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/ref.config exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/ref.raw 
+LOG (nnet3-init[5.5.1076~1-1b07b5]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/ref.raw
+nnet3-info exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/ref.raw 
+nnet3-init exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/ref.config exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/ref.raw 
+LOG (nnet3-init[5.5.1076~1-1b07b5]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/ref.raw
+nnet3-info exp/nnet3_cleaned/tdnn_sp_1c_1e_iter/configs/ref.raw 
+2023-12-22 09:08:54,261 [/net/pr2/projects/plgrid/plggdspmwit/plgkgucik/kaldi/egs/librispeech/s5/steps/nnet3/train_dnn.py:36 - <module> - INFO ] Starting DNN trainer (train_dnn.py)
+steps/nnet3/train_dnn.py --stage=-10 --cmd=run.pl --mem 4G --samples_per_iter=200000 --feat.online-ivector-dir exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 1 --trainer.optimization.num-jobs-initial 1 --trainer.optimization.num-jobs-final 1 --trainer.optimization.initial-effective-lrate 0.002 --trainer.optimization.final-effective-lrate 0.00005 --trainer.optimization.minibatch-size 512 --trainer.num-jobs-compute-prior 4 --egs.dir  --cleanup.remove-egs true --cleanup.preserve-model-interval 80 --feat-dir=data/train_960_cleaned_sp_hires --ali-dir exp/tri6b_cleaned_ali_train_960_cleaned_sp --lang data/lang --reporting.email= --dir=exp/nnet3_cleaned/tdnn_sp_1c_1e_iter
+['steps/nnet3/train_dnn.py', '--stage=-10', '--cmd=run.pl --mem 4G', '--samples_per_iter=200000', '--feat.online-ivector-dir', 'exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '1', '--trainer.optimization.num-jobs-initial', '1', '--trainer.optimization.num-jobs-final', '1', '--trainer.optimization.initial-effective-lrate', '0.002', '--trainer.optimization.final-effective-lrate', '0.00005', '--trainer.optimization.minibatch-size', '512', '--trainer.num-jobs-compute-prior', '4', '--egs.dir', '', '--cleanup.remove-egs', 'true', '--cleanup.preserve-model-interval', '80', '--feat-dir=data/train_960_cleaned_sp_hires', '--ali-dir', 'exp/tri6b_cleaned_ali_train_960_cleaned_sp', '--lang', 'data/lang', '--reporting.email=', '--dir=exp/nnet3_cleaned/tdnn_sp_1c_1e_iter']
+usage: train_dnn.py [-h] [--feat.online-ivector-dir ONLINE_IVECTOR_DIR]
+                    [--feat.cmvn-opts CMVN_OPTS] [--egs.dir EGS_DIR]
+                    [--egs.stage EGS_STAGE] [--egs.opts EGS_OPTS]
+                    [--trainer.srand SRAND] [--trainer.num-epochs NUM_EPOCHS]
+                    [--trainer.shuffle-buffer-size SHUFFLE_BUFFER_SIZE]
+                    [--trainer.max-param-change MAX_PARAM_CHANGE]
+                    [--trainer.samples-per-iter SAMPLES_PER_ITER]
+                    [--trainer.lda.rand-prune RAND_PRUNE]
+                    [--trainer.lda.max-lda-jobs MAX_LDA_JOBS]
+                    [--trainer.presoftmax-prior-scale-power PRESOFTMAX_PRIOR_SCALE_POWER]
+                    [--trainer.optimization.proportional-shrink PROPORTIONAL_SHRINK]
+                    [--trainer.optimization.initial-effective-lrate INITIAL_EFFECTIVE_LRATE]
+                    [--trainer.optimization.final-effective-lrate FINAL_EFFECTIVE_LRATE]
+                    [--trainer.optimization.num-jobs-initial NUM_JOBS_INITIAL]
+                    [--trainer.optimization.num-jobs-final NUM_JOBS_FINAL]
+                    [--trainer.optimization.num-jobs-step N]
+                    [--trainer.optimization.max-models-combine MAX_MODELS_COMBINE]
+                    [--trainer.optimization.max-objective-evaluations MAX_OBJECTIVE_EVALUATIONS]
+                    [--trainer.optimization.do-final-combination {true,false}]
+                    [--trainer.optimization.combine-sum-to-one-penalty COMBINE_SUM_TO_ONE_PENALTY]
+                    [--trainer.optimization.momentum MOMENTUM]
+                    [--trainer.dropout-schedule DROPOUT_SCHEDULE]
+                    [--trainer.add-option TRAIN_OPTS]
+                    [--trainer.optimization.backstitch-training-scale BACKSTITCH_TRAINING_SCALE]
+                    [--trainer.optimization.backstitch-training-interval BACKSTITCH_TRAINING_INTERVAL]
+                    [--trainer.compute-per-dim-accuracy {true,false}]
+                    [--stage STAGE] [--exit-stage EXIT_STAGE] [--cmd COMMAND]
+                    [--egs.cmd EGS_COMMAND]
+                    [--use-gpu {true,false,yes,no,wait}]
+                    [--cleanup {true,false}]
+                    [--cleanup.remove-egs {true,false}]
+                    [--cleanup.preserve-model-interval PRESERVE_MODEL_INTERVAL]
+                    [--reporting.email EMAIL]
+                    [--reporting.interval REPORTING_INTERVAL]
+                    [--egs.frames-per-eg FRAMES_PER_EG]
+                    [--trainer.input-model INPUT_MODEL]
+                    [--trainer.prior-subset-size PRIOR_SUBSET_SIZE]
+                    [--trainer.num-jobs-compute-prior NUM_JOBS_COMPUTE_PRIOR]
+                    [--trainer.optimization.minibatch-size MINIBATCH_SIZE]
+                    [--feat-dir FEAT_DIR] [--lang LANG] --ali-dir ALI_DIR
+                    --dir DIR
+train_dnn.py: error: unrecognized arguments: --samples_per_iter=200000

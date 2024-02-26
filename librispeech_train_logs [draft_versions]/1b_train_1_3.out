@@ -1,0 +1,49 @@
+local/nnet3/run_tdnn_1b_start.sh: creating neural net configs
+steps/nnet3/get_egs.sh --cmd run.pl --mem 4G --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires --left-context 13 --right-context 9 --left-context-initial -1 --right-context-final -1 --stage 0 --samples-per-iter 400000 --frames-per-eg 8 --srand 0 data/train_960_cleaned_sp_hires exp/tri6b_cleaned_ali_train_960_cleaned_sp exp/nnet3_cleaned/tdnn_sp_1b_3epoche/egs
+File data/train_960_cleaned_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs.sh: creating egs.  To ensure they are not deleted later you can do:  touch exp/nnet3_cleaned/tdnn_sp_1b_3epoche/egs/.nodelete
+steps/nnet3/get_egs.sh: feature type is raw, with 'apply-cmvn'
+steps/nnet3/get_egs.sh: working out number of frames of training data
+steps/nnet3/get_egs.sh: working out feature dim
+steps/nnet3/get_egs.sh: creating 323 archives, each with 399543 egs, with
+steps/nnet3/get_egs.sh:   8 labels per example, and (left,right) context = (13,9)
+steps/nnet3/get_egs.sh: copying data alignments
+steps/nnet3/get_egs.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+steps/nnet3/get_egs.sh: Generating training examples on disk
+steps/nnet3/get_egs.sh: recombining and shuffling order of archives on disk
+steps/nnet3/get_egs.sh: removing temporary archives
+steps/nnet3/get_egs.sh: removing temporary alignments
+steps/nnet3/get_egs.sh: Finished preparing training examples
+exp/nnet3_cleaned/tdnn_sp_1b_3epoche: num-iters=7752 nj=1..1 num-params=19.1M dim=40+100->5688 combine=-0.90->-0.89 (over 18) loglike:train/valid[5162,7751,combined]=(-0.87,-0.85,-0.85/-0.99,-0.97,-0.96) accuracy:train/valid[5162,7751,combined]=(0.738,0.738,0.740/0.704,0.709,0.715)
+steps/nnet3/decode.sh --nj 3 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_dev_other_hires exp/tri6b_cleaned/graph_tgsmall data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_other_tgsmall
+steps/nnet3/decode.sh --nj 3 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_dev_clean_hires exp/tri6b_cleaned/graph_tgsmall data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgsmall
+steps/nnet3/decode.sh --nj 3 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_test_clean_hires exp/tri6b_cleaned/graph_tgsmall data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_clean_tgsmall
+steps/nnet3/decode.sh --nj 3 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_test_other_hires exp/tri6b_cleaned/graph_tgsmall data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgsmall
+steps/nnet3/decode.sh: feature type is raw
+steps/nnet3/decode.sh: feature type is raw
+steps/nnet3/decode.sh: feature type is raw
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,9) and mean=5.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,5,30) and mean=13.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_fglarge
+local/nnet3/run_tdnn_1b_start.sh: there was a problem while decoding

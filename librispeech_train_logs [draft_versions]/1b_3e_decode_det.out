@@ -1,0 +1,11 @@
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+run.pl: 11 / 11 failed, log is in exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_dev_clean_tgmed/scoring/log/score.*.0.0.log
+run.pl: 11 / 11 failed, log is in exp/nnet3_cleaned/tdnn_sp_1b_3epoche/decode_test_other_tgmed/scoring/log/score.*.0.0.log
+slurmstepd: error: *** JOB 527570 ON t0002 CANCELLED AT 2023-12-16T18:00:15 ***

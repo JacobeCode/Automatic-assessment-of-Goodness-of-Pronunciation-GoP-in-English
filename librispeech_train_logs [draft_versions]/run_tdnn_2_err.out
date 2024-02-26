@@ -1,0 +1,2 @@
+run.pl: 30 / 100 failed, log is in exp/tri6b_cleaned_ali_train_960_cleaned_sp/log/fmllr.*.log
+slurmstepd: error: Detected 46 oom_kill events in StepId=501490.batch. Some of the step tasks have been OOM Killed.

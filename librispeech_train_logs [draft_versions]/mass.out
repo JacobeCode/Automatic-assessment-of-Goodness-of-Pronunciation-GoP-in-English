@@ -1,0 +1,608 @@
+steps/nnet3/decode.sh --nj 1 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_dev_other_hires exp/tri6b_cleaned/graph_tgsmall data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tgsmall
+steps/nnet3/decode.sh --nj 1 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_test_clean_hires exp/tri6b_cleaned/graph_tgsmall data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tgsmall
+steps/nnet3/decode.sh --nj 1 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_dev_clean_hires exp/tri6b_cleaned/graph_tgsmall data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tgsmall
+steps/nnet3/decode.sh --nj 1 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_test_other_hires exp/tri6b_cleaned/graph_tgsmall data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tgsmall
+steps/nnet3/decode.sh: feature type is raw
+steps/nnet3/decode.sh: feature type is raw
+steps/nnet3/decode.sh: feature type is raw
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,8) and mean=4.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,8) and mean=4.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,8) and mean=4.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp/decode_test_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,9) and mean=4.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,8) and mean=4.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_tgmed
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,2,9) and mean=4.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,9) and mean=4.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,2,8) and mean=4.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,8) and mean=3.9
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,2,8) and mean=4.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_tgsmall/log/analyze_alignments.log
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_tgmed
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,6) and mean=3.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,7) and mean=3.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,29) and mean=12.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,7) and mean=3.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,7) and mean=3.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_test_clean_tgmed
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,2,9) and mean=4.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,7) and mean=3.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,4,28) and mean=12.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_tgsmall/log/analyze_alignments.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,2,9) and mean=4.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_tgsmall
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_tglarge
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_tgsmall/log/analyze_alignments.log
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,17) and mean=7.8
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_tgsmall/log/analyze_alignments.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_dev_other_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,3,17) and mean=7.8
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_tglarge
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp/decode_dev_other_tgsmall/log/analyze_alignments.log
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_tglarge
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_tgsmall
+Overall, lattice depth (10,50,90-percentile)=(1,4,28) and mean=12.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_tgsmall/log/analyze_alignments.log
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp/decode_test_other_tgsmall/log/analyze_alignments.log
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_tgmed
+Overall, lattice depth (10,50,90-percentile)=(1,4,28) and mean=12.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tgsmall/log/analyze_alignments.log
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,20) and mean=8.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,28) and mean=11.8
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,3,18) and mean=8.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_tgsmall/log/analyze_alignments.log
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_tglarge
+Overall, lattice depth (10,50,90-percentile)=(1,3,20) and mean=9.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_clean_fglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_tgsmall/log/analyze_alignments.log
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,28) and mean=12.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+Overall, lattice depth (10,50,90-percentile)=(1,3,20) and mean=9.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,3,20) and mean=9.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,5,29) and mean=12.5
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_tgsmall/log/analyze_alignments.log
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_tgmed
+Overall, lattice depth (10,50,90-percentile)=(1,4,28) and mean=12.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tgsmall/log/analyze_alignments.log
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tgmed
+Overall, lattice depth (10,50,90-percentile)=(1,4,27) and mean=11.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_clean_fglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_tgmed
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,26) and mean=11.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_tgsmall
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_tglarge
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,28) and mean=11.7
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_tgmed
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri6b_cleaned/graph_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_tgsmall
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_tgsmall/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,28) and mean=12.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_tgsmall/log/analyze_lattice_depth_stats.log
+score best paths
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_dev_other_fglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full_cmvn/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_clean_fglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_clean_fglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_dev_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e/decode_test_other_fglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_test_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_clean_fglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_3ep/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_tiny_blr/decode_test_other_fglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_tgmed
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_iter/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_tglarge
+score confidence and timing with sclite
+Decoding done.
+steps/lmrescore.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tgmed data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_tgmed
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_tiny_set/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_clean_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_clean_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_tglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_tglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_full/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_cont/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_1e_cmvn/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1c_small_cont/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_medium_set/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_12ep_cont/decode_test_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/dev_other_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_dev_other_fglarge
+steps/lmrescore_const_arpa.sh --cmd run.pl --mem 4G data/lang_test_tgsmall data/lang_test_fglarge data/test_other_hires exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_tgsmall exp/nnet3_cleaned/tdnn_sp_1b_lr/decode_test_other_fglarge

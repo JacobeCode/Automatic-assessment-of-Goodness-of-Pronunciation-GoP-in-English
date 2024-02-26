@@ -1,0 +1,211 @@
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+fix_data_dir.sh: kept all 281241 utterances.
+fix_data_dir.sh: old files are kept in data/train_960/.backup
+utils/data/perturb_data_dir_speed_3way.sh: making sure the utt2dur and the reco2dur files are present
+... in data/train_960, because obtaining it after speed-perturbing
+... would be very slow, and you might need them.
+utils/data/get_utt2dur.sh: data/train_960/utt2dur already exists with the expected length.  We won't recompute it.
+utils/data/get_reco2dur.sh: data/train_960/wav.scp indexed by utt-id; copying utt2dur to reco2dur
+utils/data/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/train_960, in data/train_960_sp_speed0.9
+fix_data_dir.sh: kept all 281241 utterances.
+fix_data_dir.sh: old files are kept in data/train_960_sp_speed0.9/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_960_sp_speed0.9
+utils/data/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/train_960, in data/train_960_sp_speed1.1
+fix_data_dir.sh: kept all 281241 utterances.
+fix_data_dir.sh: old files are kept in data/train_960_sp_speed1.1/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_960_sp_speed1.1
+utils/data/combine_data.sh data/train_960_sp data/train_960 data/train_960_sp_speed0.9 data/train_960_sp_speed1.1
+utils/data/combine_data.sh: combined utt2uniq
+utils/data/combine_data.sh [info]: not combining segments as it does not exist
+utils/data/combine_data.sh: combined utt2spk
+utils/data/combine_data.sh [info]: not combining utt2lang as it does not exist
+utils/data/combine_data.sh: combined utt2dur
+utils/data/combine_data.sh [info]: **not combining utt2num_frames as it does not exist everywhere**
+utils/data/combine_data.sh: combined reco2dur
+utils/data/combine_data.sh [info]: **not combining feats.scp as it does not exist everywhere**
+utils/data/combine_data.sh: combined text
+utils/data/combine_data.sh [info]: **not combining cmvn.scp as it does not exist everywhere**
+utils/data/combine_data.sh [info]: not combining vad.scp as it does not exist
+utils/data/combine_data.sh [info]: not combining reco2file_and_channel as it does not exist
+utils/data/combine_data.sh: combined wav.scp
+utils/data/combine_data.sh: combined spk2gender
+fix_data_dir.sh: kept all 843723 utterances.
+fix_data_dir.sh: old files are kept in data/train_960_sp/.backup
+utils/data/perturb_data_dir_speed_3way.sh: generated 3-way speed-perturbed version of data in data/train_960, in data/train_960_sp
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_960_sp
+local/nnet3/run_ivector_common.sh: making MFCC features for low-resolution speed-perturbed data
+steps/make_mfcc.sh --cmd run.pl --mem 2G --nj 50 data/train_960_sp
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_960_sp
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for train_960_sp
+steps/compute_cmvn_stats.sh data/train_960_sp
+Succeeded creating CMVN stats for train_960_sp
+local/nnet3/run_ivector_common.sh: fixing input data-dir to remove nonexistent features, in case some 
+.. speed-perturbed segments were too short.
+fix_data_dir.sh: kept all 843723 utterances.
+fix_data_dir.sh: old files are kept in data/train_960_sp/.backup
+local/nnet3/run_ivector_common.sh: aligning with the perturbed low-resolution data
+steps/align_fmllr.sh --nj 50 --cmd run.pl --mem 2G data/train_960_sp data/lang exp/tri6b exp/tri6b_ali_train_960_sp
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs
+steps/align_fmllr.sh: aligning data in data/train_960_sp using exp/tri6b/final.alimdl and speaker-independent features.
+steps/align_fmllr.sh: computing fMLLR transforms
+steps/align_fmllr.sh: doing final alignment.
+steps/align_fmllr.sh: done aligning data.
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri6b_ali_train_960_sp
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri6b_ali_train_960_sp/log/analyze_alignments.log
+1323 warnings in exp/tri6b_ali_train_960_sp/log/align_pass1.*.log
+1011 warnings in exp/tri6b_ali_train_960_sp/log/align_pass2.*.log
+7 warnings in exp/tri6b_ali_train_960_sp/log/fmllr.*.log
+local/nnet3/run_ivector_common.sh: creating high-resolution MFCC features
+utils/copy_data_dir.sh: copied data from data/train_960_sp to data/train_960_sp_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_960_sp_hires
+utils/copy_data_dir.sh: copied data from data/test_clean to data/test_clean_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_clean_hires
+utils/copy_data_dir.sh: copied data from data/test_other to data/test_other_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_other_hires
+utils/copy_data_dir.sh: copied data from data/dev_clean to data/dev_clean_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_clean_hires
+utils/copy_data_dir.sh: copied data from data/dev_other to data/dev_other_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_other_hires
+utils/data/perturb_data_dir_volume.sh: data/train_960_sp_hires/feats.scp exists; moving it to data/train_960_sp_hires/.backup/ as it wouldn't be valid any more.
+utils/data/perturb_data_dir_volume.sh: added volume perturbation to the data in data/train_960_sp_hires
+steps/make_mfcc.sh --nj 70 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/train_960_sp_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_960_sp_hires
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for train_960_sp_hires
+steps/compute_cmvn_stats.sh data/train_960_sp_hires
+Succeeded creating CMVN stats for train_960_sp_hires
+fix_data_dir.sh: kept all 843723 utterances.
+fix_data_dir.sh: old files are kept in data/train_960_sp_hires/.backup
+steps/make_mfcc.sh --nj 70 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/test_clean_hires
+steps/make_mfcc.sh: moving data/test_clean_hires/feats.scp to data/test_clean_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_clean_hires
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for test_clean_hires
+steps/compute_cmvn_stats.sh data/test_clean_hires
+Succeeded creating CMVN stats for test_clean_hires
+fix_data_dir.sh: kept all 2620 utterances.
+fix_data_dir.sh: old files are kept in data/test_clean_hires/.backup
+steps/make_mfcc.sh --nj 70 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/test_other_hires
+steps/make_mfcc.sh: moving data/test_other_hires/feats.scp to data/test_other_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_other_hires
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for test_other_hires
+steps/compute_cmvn_stats.sh data/test_other_hires
+Succeeded creating CMVN stats for test_other_hires
+fix_data_dir.sh: kept all 2939 utterances.
+fix_data_dir.sh: old files are kept in data/test_other_hires/.backup
+steps/make_mfcc.sh --nj 70 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/dev_clean_hires
+steps/make_mfcc.sh: moving data/dev_clean_hires/feats.scp to data/dev_clean_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_clean_hires
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for dev_clean_hires
+steps/compute_cmvn_stats.sh data/dev_clean_hires
+Succeeded creating CMVN stats for dev_clean_hires
+fix_data_dir.sh: kept all 2703 utterances.
+fix_data_dir.sh: old files are kept in data/dev_clean_hires/.backup
+steps/make_mfcc.sh --nj 70 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/dev_other_hires
+steps/make_mfcc.sh: moving data/dev_other_hires/feats.scp to data/dev_other_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_other_hires
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for dev_other_hires
+steps/compute_cmvn_stats.sh data/dev_other_hires
+Succeeded creating CMVN stats for dev_other_hires
+fix_data_dir.sh: kept all 2864 utterances.
+fix_data_dir.sh: old files are kept in data/dev_other_hires/.backup
+utils/subset_data_dir.sh: reducing #utt from 843723 to 60000
+local/nnet3/run_ivector_common.sh: making a subset of data to train the diagonal UBM and the PCA transform.
+utils/data/subset_data_dir.sh: reducing #utt from 843723 to 8437
+local/nnet3/run_ivector_common.sh: computing a PCA transform from the hires data.
+steps/online/nnet2/get_pca_transform.sh --cmd run.pl --mem 2G --splice-opts --left-context=3 --right-context=3 --max-utts 10000 --subsample 2 exp/nnet3/diag_ubm/train_960_sp_hires_subset exp/nnet3/pca_transform
+Done estimating PCA transform in exp/nnet3/pca_transform
+local/nnet3/run_ivector_common.sh: training the diagonal UBM.
+steps/online/nnet2/train_diag_ubm.sh --cmd run.pl --mem 2G --nj 30 --num-frames 700000 --num-threads 16 exp/nnet3/diag_ubm/train_960_sp_hires_subset 512 exp/nnet3/pca_transform exp/nnet3/diag_ubm
+steps/online/nnet2/train_diag_ubm.sh: Directory exp/nnet3/diag_ubm already exists. Backing up diagonal UBM in exp/nnet3/diag_ubm/backup.e0F
+steps/online/nnet2/train_diag_ubm.sh: initializing model from E-M in memory, 
+steps/online/nnet2/train_diag_ubm.sh: starting from 256 Gaussians, reaching 512;
+steps/online/nnet2/train_diag_ubm.sh: for 20 iterations, using at most 700000 frames of data
+Getting Gaussian-selection info
+steps/online/nnet2/train_diag_ubm.sh: will train for 4 iterations, in parallel over
+steps/online/nnet2/train_diag_ubm.sh: 30 machines, parallelized with 'run.pl --mem 2G'
+steps/online/nnet2/train_diag_ubm.sh: Training pass 0
+steps/online/nnet2/train_diag_ubm.sh: Training pass 1
+steps/online/nnet2/train_diag_ubm.sh: Training pass 2
+steps/online/nnet2/train_diag_ubm.sh: Training pass 3
+local/nnet3/run_ivector_common.sh: training the iVector extractor
+steps/online/nnet2/train_ivector_extractor.sh --cmd run.pl --mem 2G --nj 10 --num-processes 4 data/train_960_sp_hires_60k exp/nnet3/diag_ubm exp/nnet3/extractor
+steps/online/nnet2/train_ivector_extractor.sh: doing Gaussian selection and posterior computation
+Accumulating stats (pass 0)
+Summing accs (pass 0)
+Updating model (pass 0)
+Accumulating stats (pass 1)
+Summing accs (pass 1)
+Updating model (pass 1)
+Accumulating stats (pass 2)
+Summing accs (pass 2)
+Updating model (pass 2)
+Accumulating stats (pass 3)
+Summing accs (pass 3)
+Updating model (pass 3)
+Accumulating stats (pass 4)
+Summing accs (pass 4)
+Updating model (pass 4)
+Accumulating stats (pass 5)
+Summing accs (pass 5)
+Updating model (pass 5)
+Accumulating stats (pass 6)
+Summing accs (pass 6)
+Updating model (pass 6)
+Accumulating stats (pass 7)
+Summing accs (pass 7)
+Updating model (pass 7)
+Accumulating stats (pass 8)
+Summing accs (pass 8)
+Updating model (pass 8)
+Accumulating stats (pass 9)
+Summing accs (pass 9)
+Updating model (pass 9)
+local/nnet3/run_ivector_common.sh: extracting iVectors for training data
+utils/data/modify_speaker_info.sh: copied data from data/train_960_sp_hires to exp/nnet3/ivectors_train_960_sp_hires/train_960_sp_hires_max2, number of speakers changed from 16398 to 426129
+utils/validate_data_dir.sh: Successfully validated data-directory exp/nnet3/ivectors_train_960_sp_hires/train_960_sp_hires_max2
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --mem 2G --nj 50 exp/nnet3/ivectors_train_960_sp_hires/train_960_sp_hires_max2 exp/nnet3/extractor exp/nnet3/ivectors_train_960_sp_hires
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to exp/nnet3/ivectors_train_960_sp_hires using the extractor in exp/nnet3/extractor.
+local/nnet3/run_ivector_common.sh: extracting iVectors for dev and test data
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --mem 2G --nj 20 data/test_clean_hires exp/nnet3/extractor exp/nnet3/ivectors_test_clean_hires
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to exp/nnet3/ivectors_test_clean_hires using the extractor in exp/nnet3/extractor.
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --mem 2G --nj 20 data/test_other_hires exp/nnet3/extractor exp/nnet3/ivectors_test_other_hires
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to exp/nnet3/ivectors_test_other_hires using the extractor in exp/nnet3/extractor.
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --mem 2G --nj 20 data/dev_clean_hires exp/nnet3/extractor exp/nnet3/ivectors_dev_clean_hires
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to exp/nnet3/ivectors_dev_clean_hires using the extractor in exp/nnet3/extractor.
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --mem 2G --nj 20 data/dev_other_hires exp/nnet3/extractor exp/nnet3/ivectors_dev_other_hires
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to exp/nnet3/ivectors_dev_other_hires using the extractor in exp/nnet3/extractor.
+local/nnet3/run_tdnn_1c.sh: creating neural net configs
+steps/nnet3/get_egs.sh --cmd run.pl --mem 4G --cmvn-opts --norm-means=true --norm-vars=true --online-ivector-dir exp/nnet3/ivectors_train_960_sp_hires --left-context 41 --right-context 41 --left-context-initial -1 --right-context-final -1 --stage 0 --samples-per-iter 400000 --frames-per-eg 8 --srand 0 data/train_960_sp_hires exp/tri6b_ali_train_960_sp exp/nnet3/tdnn_sp_1c_2base_full/egs
+File data/train_960_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs.sh: creating egs.  To ensure they are not deleted later you can do:  touch exp/nnet3/tdnn_sp_1c_2base_full/egs/.nodelete
+steps/nnet3/get_egs.sh: feature type is raw, with 'apply-cmvn'
+steps/nnet3/get_egs.sh: working out number of frames of training data
+steps/nnet3/get_egs.sh: working out feature dim
+steps/nnet3/get_egs.sh: creating 327 archives, each with 399437 egs, with
+steps/nnet3/get_egs.sh:   8 labels per example, and (left,right) context = (41,41)
+steps/nnet3/get_egs.sh: copying data alignments
+steps/nnet3/get_egs.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+steps/nnet3/get_egs.sh: Generating training examples on disk
+steps/nnet3/get_egs.sh: recombining and shuffling order of archives on disk
+steps/nnet3/get_egs.sh: removing temporary archives
+steps/nnet3/get_egs.sh: removing temporary alignments
+steps/nnet3/get_egs.sh: Finished preparing training examples

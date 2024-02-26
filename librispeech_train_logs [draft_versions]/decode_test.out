@@ -1,0 +1,64 @@
+steps/nnet3/decode.sh --nj 30 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_test_clean_hires data/test_clean_hires /decode_test_clean_tgsmall
+steps/nnet3/decode.sh --nj 30 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_dev_other_hires data/dev_other_hires /decode_dev_other_tgsmall
+steps/nnet3/decode.sh --nj 30 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_test_other_hires data/test_other_hires /decode_test_other_tgsmall
+steps/nnet3/decode.sh --nj 30 --cmd run.pl --mem 4G --online-ivector-dir exp/nnet3_cleaned/ivectors_dev_clean_hires data/dev_clean_hires /decode_dev_clean_tgsmall
+Usage: steps/nnet3/decode.sh [options] <graph-dir> <data-dir> <decode-dir>
+e.g.:   steps/nnet3/decode.sh --nj 8 \
+--online-ivector-dir exp/nnet2_online/ivectors_test_eval92 \
+    exp/tri4b/graph_bg data/test_eval92_hires /decode_bg_eval92
+main options (for others, see top of script file)
+  --config <config-file>                   # config containing options
+  --nj <nj>                                # number of parallel jobs
+  --cmd <cmd>                              # Command to run in parallel with
+  --beam <beam>                            # Decoding beam; default 15.0
+  --iter <iter>                            # Iteration of model to decode; default is final.
+  --scoring-opts <string>                  # options to local/score.sh
+  --num-threads <n>                        # number of threads to use, default 1.
+  --use-gpu <true|false>                   # default: false.  If true, we recommend
+                                           # to use large --num-threads as the graph
+                                           # search becomes the limiting factor.
+Usage: steps/nnet3/decode.sh [options] <graph-dir> <data-dir> <decode-dir>
+e.g.:   steps/nnet3/decode.sh --nj 8 \
+--online-ivector-dir exp/nnet2_online/ivectors_test_eval92 \
+    exp/tri4b/graph_bg data/test_eval92_hires /decode_bg_eval92
+main options (for others, see top of script file)
+  --config <config-file>                   # config containing options
+  --nj <nj>                                # number of parallel jobs
+  --cmd <cmd>                              # Command to run in parallel with
+  --beam <beam>                            # Decoding beam; default 15.0
+  --iter <iter>                            # Iteration of model to decode; default is final.
+  --scoring-opts <string>                  # options to local/score.sh
+  --num-threads <n>                        # number of threads to use, default 1.
+  --use-gpu <true|false>                   # default: false.  If true, we recommend
+                                           # to use large --num-threads as the graph
+                                           # search becomes the limiting factor.
+Usage: steps/nnet3/decode.sh [options] <graph-dir> <data-dir> <decode-dir>
+e.g.:   steps/nnet3/decode.sh --nj 8 \
+--online-ivector-dir exp/nnet2_online/ivectors_test_eval92 \
+    exp/tri4b/graph_bg data/test_eval92_hires /decode_bg_eval92
+main options (for others, see top of script file)
+  --config <config-file>                   # config containing options
+  --nj <nj>                                # number of parallel jobs
+  --cmd <cmd>                              # Command to run in parallel with
+  --beam <beam>                            # Decoding beam; default 15.0
+  --iter <iter>                            # Iteration of model to decode; default is final.
+  --scoring-opts <string>                  # options to local/score.sh
+  --num-threads <n>                        # number of threads to use, default 1.
+  --use-gpu <true|false>                   # default: false.  If true, we recommend
+                                           # to use large --num-threads as the graph
+                                           # search becomes the limiting factor.
+Usage: steps/nnet3/decode.sh [options] <graph-dir> <data-dir> <decode-dir>
+e.g.:   steps/nnet3/decode.sh --nj 8 \
+--online-ivector-dir exp/nnet2_online/ivectors_test_eval92 \
+    exp/tri4b/graph_bg data/test_eval92_hires /decode_bg_eval92
+main options (for others, see top of script file)
+  --config <config-file>                   # config containing options
+  --nj <nj>                                # number of parallel jobs
+  --cmd <cmd>                              # Command to run in parallel with
+  --beam <beam>                            # Decoding beam; default 15.0
+  --iter <iter>                            # Iteration of model to decode; default is final.
+  --scoring-opts <string>                  # options to local/score.sh
+  --num-threads <n>                        # number of threads to use, default 1.
+  --use-gpu <true|false>                   # default: false.  If true, we recommend
+                                           # to use large --num-threads as the graph
+                                           # search becomes the limiting factor.

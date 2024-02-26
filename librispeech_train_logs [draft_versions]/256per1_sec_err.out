@@ -1,0 +1,2 @@
+local/nnet3/run_tdnn.sh: line 169: warning: here-document at line 98 delimited by end-of-file (wanted `EOF')
+local/nnet3/run_tdnn.sh: line 170: syntax error: unexpected end of file

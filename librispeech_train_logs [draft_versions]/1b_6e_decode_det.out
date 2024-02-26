@@ -1,0 +1,10 @@
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+fstrmsymbols data/lang_test_tgmed/phones/disambig.int 
+fstdeterminizestar 
+run.pl: 11 / 11 failed, log is in exp/nnet3_cleaned/tdnn_sp_1b_6epoche/decode_dev_other_tgmed/scoring/log/score.*.0.0.log
+run.pl: 11 / 11 failed, log is in exp/nnet3_cleaned/tdnn_sp_1b_6epoche/decode_test_other_tgmed/scoring/log/score.*.0.0.log

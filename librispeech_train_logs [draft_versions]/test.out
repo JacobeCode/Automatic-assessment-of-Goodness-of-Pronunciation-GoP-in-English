@@ -1,0 +1,4 @@
+local/nnet3/run_tdnn.sh: creating neural net configs
+steps/nnet3/get_egs.sh --cmd run.pl --mem 4G --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/nnet3_cleaned/ivectors_train_960_cleaned_sp_hires --left-context 13 --right-context 9 --left-context-initial -1 --right-context-final -1 --stage 0 --samples-per-iter 400000 --frames-per-eg 8 --srand 0 data/train_960_cleaned_sp_hires exp/tri6b_cleaned_ali_train_960_cleaned_sp exp/nnet3_cleaned/tdnn_sp_cont/egs
+File data/train_960_cleaned_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.

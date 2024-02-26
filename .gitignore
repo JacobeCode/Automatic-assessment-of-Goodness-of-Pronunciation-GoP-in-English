@@ -171,6 +171,3 @@ other_models_and_data/lang_data/lang_test_tgsmall/tmp/LG.fst
 other_models_and_data/tri6b_cleaned_work_wo_graphs/ctm_edits.modified
 other_models_and_data/tri6b_cleaned_work_wo_graphs/ctm_edits.segmented
 other_models_and_data/tri6b_cleaned_work_wo_graphs/ctm_edits.tainted
-
-# Partial stuff
-gop_best_results_backup_example

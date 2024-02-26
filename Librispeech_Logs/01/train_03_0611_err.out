@@ -1,2 +1,0 @@
-run.pl: 18 / 50 failed, log is in data/train_960_cleaned_sp/log/make_mfcc_train_960_cleaned_sp.*.log
-slurmstepd: error: Detected 21 oom_kill events in StepId=478905.batch. Some of the step tasks have been OOM Killed.

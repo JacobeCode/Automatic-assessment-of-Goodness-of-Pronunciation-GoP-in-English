@@ -1,0 +1,10 @@
+   input dim=100 name=ivector
+   input dim=40 name=input
+   fixed-affine-layer name=lda input=Append(-2,-1,0,1,2,ReplaceIndex(ivector, t, 0)) affine-transform-file=exp/nnet3_cleaned/tdnn_sp_1b_medium_set/configs/lda.mat
+
+   relu-batchnorm-layer name=tdnn0 dim=1280
+   relu-batchnorm-layer name=tdnn1 dim=1280 input=Append(-1,2)
+   relu-batchnorm-layer name=tdnn2 dim=1280 input=Append(-3,3)
+   relu-batchnorm-layer name=tdnn3 dim=1280 input=Append(-7,2)
+   relu-batchnorm-layer name=tdnn4 dim=1280
+   output-layer name=output input=tdnn4 dim=5688 max-change=1.5

@@ -1,16 +1,3 @@
-# Not cleaned stuff
-GOP_Results
-GoP_script_backup
-libri_logs
-Librispeech_Logs
-Librispeech_Models
-Librispeech_script_backup
-Models_backup
-nnet3_training_files
-plots
-plots_jpg
-scripts
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -172,5 +159,25 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 
-# Temporary files
-exp
+# Large files
+gop_best_results_backup_example/exp/probs_train
+gop_best_results_backup_example/exp/probs_test
+other_models_and_data/lang_data/lang_nosp_test_fglarge/G.carpa
+other_models_and_data/lang_data/lang_nosp_test_tglarge/G.carpa
+other_models_and_data/lang_data/lang_test_fglarge/G.carpa
+other_models_and_data/lang_data/lang_test_tglarge/G.carpa
+other_models_and_data/lang_data/lang_test_tgsmall/tmp/CLG_3_1.fst
+other_models_and_data/lang_data/lang_test_tgsmall/tmp/LG.fst
+other_models_and_data/tri6b_cleaned_work_wo_graphs/ctm_edits.modified
+other_models_and_data/tri6b_cleaned_work_wo_graphs/ctm_edits.segmented
+other_models_and_data/tri6b_cleaned_work_wo_graphs/ctm_edits.tainted
+
+# Partial stuff
+best_models_plots
+data [wer_gop_trainstats] [draft_versions]
+gop_best_results_backup_example
+gop_logs
+librispeech_train_logs [draft_versions]
+models_plot_data
+other_models_and_data
+reports_and_thesis

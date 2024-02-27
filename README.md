@@ -5,7 +5,11 @@
 ## Introduction
 This repository contains files and informations about project created as Engineering Thesis. 
 
-Main goal of this project and research is Automatic Assessment with Goodnees of Pronuanciaction algorithm in English language. 
+Main goal of this project and research is Automatic Assessment with Goodnees of Pronuanciaction algorithm in English language. This project was based on Kaldi toolit and as in solution used there, the solution proposed in (1) was used as reference in implementation and training.
+
+In course of this project with use of Kaldi toolit a few ASR models was trained and tested with GoP algorithm.
+
+
 
 Program is created as Engineering Thesis by [JacobeCode](https://github.com/JacobeCode).
 
@@ -15,13 +19,7 @@ Program is created as Engineering Thesis by [JacobeCode](https://github.com/Jaco
 
 ## Content
 
+## Citing
 
-@software{Hu2015ImprovedMD,
-  title={Improved mispronunciation detection with deep neural network trained acoustic models and transfer learning based logistic regression classifiers},
-  author={Wenping Hu and Yao Qian and Frank K. Soong and Yong Wang},
-  journal={Speech Commun.},
-  year={2015},
-  volume={67},
-  pages={154-166},
-  url={https://api.semanticscholar.org/CorpusID:205223190}
-}
+> (1) Hu, W., Qian, Y., Soong, F.K., & Wang, Y. (2015). Improved mispronunciation detection with deep neural network trained
+> acoustic models and transfer learning based logistic regression classifiers. Speech Commun., 67, 154-166.

@@ -26,6 +26,7 @@ In consecutive directories can be found:
 - `librispeech_train_logs` - log files from consecutive ASR training runs with description of actions and results.
 - `models_plot_data` - separate data for each model about training process (can be used for plotting results).
 - `other_models_and_data` - mainly data and files connected to smaller models trained and used in whole process (like mono models).
+- `reports_and_thesis` - thesis, reports and presentation (in Polish language).
 
 Program is created as Engineering Thesis by [JacobeCode](https://github.com/JacobeCode).
 

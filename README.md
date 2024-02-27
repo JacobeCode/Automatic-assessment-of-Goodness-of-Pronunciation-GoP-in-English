@@ -16,7 +16,7 @@ Program is created as Engineering Thesis by [JacobeCode](https://github.com/Jaco
 ## Content
 
 
-@article{Hu2015ImprovedMD,
+@software{Hu2015ImprovedMD,
   title={Improved mispronunciation detection with deep neural network trained acoustic models and transfer learning based logistic regression classifiers},
   author={Wenping Hu and Yao Qian and Frank K. Soong and Yong Wang},
   journal={Speech Commun.},

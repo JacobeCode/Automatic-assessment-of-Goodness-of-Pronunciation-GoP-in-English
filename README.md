@@ -1,6 +1,6 @@
 # Automatic assessment of Goodness of Pronunciation in English
 
-## This repository contains files, models and results connected to the project entitled "Automatic Assessment of Goodness of Pronunciation in English". The main goal of this project done as an engineering thesis was to train ASR models compatible with the Goodness of Pronunciation (GoP) algorithm and test (or improve if it is possible) the classic formulation of Goodness of Pronunciation with the use of Kaldi toolkit. Also, project involved a full literature study about related topics.
+## This repository contains files, models and results connected to the project entitled "Automatic Assessment of Goodness of Pronunciation in English". The main goal of this project done as an engineering thesis was to train ASR models compatible with the Goodness of Pronunciation (GoP) algorithm and test (or improve if it is possible) the classic formulation of Goodness of Pronunciation with the use of [Kaldi](https://github.com/kaldi-asr/kaldi) toolkit. Also, project involved a full literature study about related topics.
 
 ## Introduction
 This repository contains files and informations about project created as Engineering Thesis. 

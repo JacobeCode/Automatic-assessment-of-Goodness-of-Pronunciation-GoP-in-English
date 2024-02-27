@@ -11,17 +11,23 @@ In course of this project with use of Kaldi toolit a few ASR models was trained 
 
 Results and models can be found in respecive directories.
 
-Thesis and report (currently only in Polish) can be found in 'reports_and_thesis'.
-
-
-
-Program is created as Engineering Thesis by [JacobeCode](https://github.com/JacobeCode).
-
-## Installation/Requirements
-
-- Python 3.x
+Thesis and report (currently only in Polish) can be found in `reports_and_thesis`.
 
 ## Content
+
+This version of repository contains final files and reports connected to this project (exceptions are the files with `[draft version]` tag - these files might be a little outdated or not very well organized).
+
+In consecutive directories can be found:
+- `GoP_Best_Results_Backup_Example` - files of the final and best GoP run with tdnn_sp_1c_smallset_cmvn model.
+- `GoP_logs` - log files from consecutive algorithm runs with description of actions and results.
+- `asr_models` - files and models connected to all trained ASR models in course of this project.
+- `best_model_plots` - plots connected to training [Accuracy and Loss] for best models (also used in report).
+- `data [wer_gop_trainstats]` - data in xlsx format - can be used for plotting or analysis. Mainly GoP and WER results and also Loss and Accuracy stats.
+- `librispeech_train_logs` - log files from consecutive ASR training runs with description of actions and results.
+- `models_plot_data` - separate data for each model about training process (can be used for plotting results).
+- `other_models_and_data` - mainly data and files connected to smaller models trained and used in whole process (like mono models).
+
+Program is created as Engineering Thesis by [JacobeCode](https://github.com/JacobeCode).
 
 ## Citing
 

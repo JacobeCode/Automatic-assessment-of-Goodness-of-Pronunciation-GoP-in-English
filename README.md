@@ -9,6 +9,10 @@ Main goal of this project and research is Automatic Assessment with Goodnees of 
 
 In course of this project with use of Kaldi toolit a few ASR models was trained and tested with GoP algorithm.
 
+Results and models can be found in respecive directories.
+
+Thesis and report (currently only in Polish) can be found in 'reports_and_thesis'.
+
 
 
 Program is created as Engineering Thesis by [JacobeCode](https://github.com/JacobeCode).

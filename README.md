@@ -2,6 +2,8 @@
 
 ## This repository contains files, models and results connected to the project entitled "Automatic Assessment of Goodness of Pronunciation in English". The main goal of this project done as an engineering thesis was to train ASR models compatible with the Goodness of Pronunciation (GoP) algorithm and test (or improve if it is possible) the classic formulation of Goodness of Pronunciation with the use of [Kaldi](https://github.com/kaldi-asr/kaldi) toolkit. Also, project involved a full literature study about related topics.
 
+### The majority of this project was done with the use of the PLGrid infrastructure (PLG/2023/016645).
+
 ## Introduction
 This repository contains files and information about the project created as an Engineering Thesis. 
 
